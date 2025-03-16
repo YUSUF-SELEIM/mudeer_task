@@ -36,6 +36,7 @@ interface NotificationCardProps {
 
 export function NotificationComponentCard({
 	item,
+	isSelected,
 	onSelect,
 }: NotificationCardProps) {
 	const isUnread =
@@ -45,7 +46,7 @@ export function NotificationComponentCard({
 
 	return (
 		<Card
-			className={`py-3 px-9 gap-3 h-[96px] cursor-pointer hover:bg-[#F4F4F5] relative group border border-[#F4F4F5]`}
+			className={`py-3 px-9 gap-3 h-[96px] cursor-pointer hover:bg-[#F4F4F5] relative group border border-[#F4F4F5] ${isSelected ? "bg-[#F4F4F5]" : ""}`}
 			onClick={onSelect}>
 			<div className="h-full flex items-center gap-3">
 				{isUnread && (
