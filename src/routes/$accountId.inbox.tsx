@@ -1,8 +1,11 @@
+import ActivityDashboard from "@/components/ActivityDashboard";
+import FilteredActivityView from "@/components/FilteredActivityView";
 import { createFileRoute } from "@tanstack/react-router";
 
 // Define the search params type
 interface SearchParams {
-	tab: string; // Make tab required with a default value
+	tab: string;
+	filterApplied?: string;
 }
 
 export const Route = createFileRoute("/$accountId/inbox")({
@@ -11,21 +14,29 @@ export const Route = createFileRoute("/$accountId/inbox")({
 		// Validate and ensure tab is defined with a default value
 		return {
 			tab: typeof search.tab === "string" ? search.tab : "activity",
+			filterApplied:
+				typeof search.filterApplied === "string"
+					? search.filterApplied
+					: undefined,
 		};
 	},
 });
 
 function AccountInbox() {
-	// Use the provided hooks to access search params and route params
-	const { tab } = Route.useSearch();
+	const { tab, filterApplied } = Route.useSearch();
 	const { accountId } = Route.useParams();
+	console.log("Account ID:", accountId);
+	console.log("Tab:", tab);
+	console.log("Filter Applied:", filterApplied);
 
 	return (
-		<div className="bg-white h-full w-full">
-			<div className="p-6">
-				{/* Safely use search.tab and accountId */}
-				Current tab: {tab} for account {accountId}
-			</div>
+		<div dir="rtl" className="flex h-full bg-background">
+			{tab === "activity" && !filterApplied && <ActivityDashboard />}
+			{tab === "activity" && filterApplied && (
+				<FilteredActivityView
+					filterType={filterApplied}
+				/>
+			)}
 		</div>
 	);
 }
