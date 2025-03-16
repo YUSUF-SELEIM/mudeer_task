@@ -37,6 +37,11 @@ export default function Dashboard() {
 	useEffect(() => {
 		if (fetchedNotificationComponents) {
 			setNotificationComponents(fetchedNotificationComponents);
+
+			// Automatically select the first item
+			if (fetchedNotificationComponents.length > 0) {
+				setSelectedItem(fetchedNotificationComponents[0]);
+			}
 		}
 	}, [fetchedNotificationComponents]);
 
