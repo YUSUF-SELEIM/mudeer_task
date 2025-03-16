@@ -4,10 +4,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: "Graphik Arabic", system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -136,7 +140,7 @@
 @font-face {
   font-family: 'Graphik Arabic';
   src: local('GraphikArabicBlack'), local('GraphikArabic-Black'),
-    url('../public/fonts/GraphikArabic-Black.woff2') format('woff2');
+    url('/fonts/GraphikArabic-Black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -145,7 +149,7 @@
 @font-face {
   font-family: 'Graphik Arabic';
   src: local('GraphikArabicBold'), local('GraphikArabic-Bold'),
-    url('../public/fonts/GraphikArabic-Bold.woff2') format('woff2');
+    url('fonts/GraphikArabic-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -154,7 +158,7 @@
 @font-face {
   font-family: 'Graphik Arabic';
   src: local('GraphikArabicExtralight'), local('GraphikArabic-Extralight'),
-    url('../public/fonts/GraphikArabic-Extralight.woff2') format('woff2');
+    url('/fonts/GraphikArabic-Extralight.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -163,7 +167,7 @@
 @font-face {
   font-family: 'Graphik Arabic';
   src: local('GraphikArabicLight'), local('GraphikArabic-Light'),
-    url('../public/fonts/GraphikArabic-Light.woff2') format('woff2');
+    url('/fonts/GraphikArabic-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -172,7 +176,7 @@
 @font-face {
   font-family: 'Graphik Arabic';
   src: local('GraphikArabicMedium'), local('GraphikArabic-Medium'),
-    url('../public/fonts/GraphikArabic-Medium.woff2') format('woff2');
+    url('/fonts/GraphikArabic-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -181,7 +185,7 @@
 @font-face {
   font-family: 'Graphik Arabic';
   src: local('GraphikArabicRegular'), local('GraphikArabic-Regular'),
-    url('../public/fonts/GraphikArabic-Regular.woff2') format('woff2');
+    url('/fonts/GraphikArabic-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -190,7 +194,7 @@
 @font-face {
   font-family: 'Graphik Arabic';
   src: local('GraphikArabicThin'), local('GraphikArabic-Thin'),
-    url('../public/fonts/GraphikArabic-Thin.woff2') format('woff2');
+    url('/fonts/GraphikArabic-Thin.woff2') format('woff2');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -199,7 +203,7 @@
 @font-face {
   font-family: 'Graphik Arabic';
   src: local('GraphikArabicSuper'), local('GraphikArabic-Super'),
-    url('../public/fonts/GraphikArabic-Super.woff2') format('woff2');
+    url('/fonts/GraphikArabic-Super.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -208,7 +212,7 @@
 @font-face {
   font-family: 'Graphik Arabic';
   src: local('GraphikArabicSemibold'), local('GraphikArabic-Semibold'),
-    url('../public/fonts/GraphikArabic-Semibold.woff2') format('woff2');
+    url('/fonts/GraphikArabic-Semibold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
