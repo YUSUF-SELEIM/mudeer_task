@@ -4,7 +4,7 @@ import {
 	Outlet,
 	useSearch,
 } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
+// import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 export const Route = createRootRoute({
 	component: RootComponent,
@@ -25,7 +25,7 @@ function RootComponent() {
 		<>
 			{!isIndexPage && (
 				<>
-					<div className="w-full p-6 text-right">
+					<div className="w-full p-6 pb-0 text-right">
 						<h1 className="text-[20px] leading-[24px] font-semibold">
 							الإشعارات
 						</h1>
@@ -64,7 +64,7 @@ function RootComponent() {
 				</>
 			)}
 			<Outlet />
-			<TanStackRouterDevtools />
+			{/* <TanStackRouterDevtools /> */}
 		</>
 	);
 }
