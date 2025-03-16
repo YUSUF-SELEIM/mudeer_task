@@ -25,7 +25,7 @@ export default function FilteredActivityView({
 			<NotificationActions accountId={"9018283645"} />
 
 			<div className="w-full flex flex-col h-full items-center justify-center space-y-6">
-				<img src="public/looking_under_couch 1.svg" alt="" />
+				<img src="/looking_under_couch 1.svg" alt="" />
 				<span className="font-[600] text-[24px] leading-[32px] text-center">
 					لم يتم العثور على أي نشاط.
 				</span>
